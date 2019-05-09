@@ -7,7 +7,6 @@
  */
 package console;
 
-import hangman.ArtificialPlayer;
 import hangman.Hangman;
 import hangman.Player;
 
@@ -16,13 +15,14 @@ import hangman.Player;
  * 
  * @author Claudio Cusano <claudio.cusano@unipv.it>
  */
+/*
 public class LocalGame {
     
     /**
      * Play the game with the terminal.
      * 
      * @param args ignored
-     */
+
     public static void main(String[] args) {
         Hangman game = new Hangman();
         Player player = new LocalPlayer();
@@ -30,3 +30,4 @@ public class LocalGame {
         game.playGame(player);
     }
 }
+*/

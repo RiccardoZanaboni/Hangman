@@ -7,6 +7,7 @@
  */
 package hangman;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,7 +48,7 @@ public class Game {
     /**
      * Notify a change to all the observers.
      */
-    public void notifyObservers() {
+    public void notifyObservers() throws IOException {
         for (GameObserver obs : observers)
             obs.update(this);
     }
@@ -57,7 +58,7 @@ public class Game {
      * 
      * @param c the letter guessed by the player
      */
-    public void makeAttempt(char c) {
+    public void makeAttempt(char c) throws IOException {
         c = Character.toUpperCase(c);
         if (!attempts.contains(c))
             attempts.add(c);

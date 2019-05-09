@@ -7,6 +7,8 @@
  */
 package hangman;
 
+import java.io.IOException;
+
 /**
  * Object that gets notified as the game progresses.
  * 
@@ -19,5 +21,5 @@ public interface GameObserver {
      * 
      * @param game the observed game
      */
-    public void update(Game game);    
+    public void update(Game game) throws IOException;
 }

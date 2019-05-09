@@ -14,6 +14,7 @@ import java.util.Random;
  *
  * @author Claudio Cusano <claudio.cusano@unipv.it>
  */
+/*
 public class ArtificialPlayer extends Player {
 
     Random randomGenerator;
@@ -36,3 +37,4 @@ public class ArtificialPlayer extends Player {
         log.info(r.getKnownLetters() +  "   [" + r.getResult() + "]");
     }
 }
+*/
