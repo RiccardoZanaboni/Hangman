@@ -33,11 +33,8 @@ public class HangmanServer {
                 try {
                     Socket socket = serverSocket.accept();
                     ConnectedClient client;
-                    client = new ConnectedClient();
+                    client = new ConnectedClient(socket);
                     client.start();
-                    Hangman game = new Hangman();
-                    Player player = new NetworkPlayer(socket);
-                    game.playGame(player);
                 } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
