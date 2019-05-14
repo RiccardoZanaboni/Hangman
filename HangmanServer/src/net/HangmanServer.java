@@ -29,13 +29,21 @@ public class HangmanServer {
         try {
             ServerSocket serverSocket;
             serverSocket = new ServerSocket(8888);
-            Socket socket=serverSocket.accept();
-            Hangman game = new Hangman();
-            Player player = new NetworkPlayer(socket);
-            game.playGame(player);
+            while (true) {
+                try {
+                    Socket socket = serverSocket.accept();
+                    ConnectedClient client;
+                    client = new ConnectedClient();
+                    client.start();
+                    Hangman game = new Hangman();
+                    Player player = new NetworkPlayer(socket);
+                    game.playGame(player);
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
+            }
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-
     }
 }
